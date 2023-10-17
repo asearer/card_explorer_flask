@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Explorer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Pirata One' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <h1 class="animated">
+            Chronicles of Ethiria
+        </h1>
+        <div class="globe">
+            <img src="{{ url_for('static', filename='globe.gif') }}" alt="">
+        </div>
+        <div id="card-container" class="card-container">
+            <!-- Cards will be added dynamically via JavaScript -->
+        </div>
+        <button id="draw-card">Explore Cards</button>
+    </div>
+    <footer>&copy; 2023 asearer</footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+

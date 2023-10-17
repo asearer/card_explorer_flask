@@ -1,0 +1,82 @@
+/* static/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../static/oldpaper.png");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Pirata One';
+    font-size: 22px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-image: url("../static/oldpaper.png");
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    width: calc(30% - 10px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: 'Pirata One';
+    font-size: 22px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.animated {
+    animation: fadeInOut 3.5s ease-in-out infinite;
+}
+
+.globe {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.2s;
+}

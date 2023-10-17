@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Cards</title>
+    <!-- Include Bootstrap CSS (add your CDN or local file path) -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Welcome to Ethiria</h1>
+        <div class="row mt-4">
+            {% for card_filename in card_filenames %}
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='cards/' ~ card_filename) }}" alt="{{ card_filename }}" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ card_filename }}</h5>
+                            <p class="card-text">Card description or content goes here.</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery (add your CDN or local file paths) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
